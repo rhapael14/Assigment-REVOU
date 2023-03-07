@@ -32,10 +32,23 @@
 		</section>
 		<section class="home" id="#home">
 			<div class="about">
-				<img src="https://placehold.co/500x300" alt="banner">
+				<div class="slide-show">
+					<div class="slide fade">
+						<img src="./assets/banner-1.jpg" alt="banner-1" class="banner">
+					</div>
+					<div class="slide fade">
+						<img src="./assets/banner-2.jpg" alt="banner-2" class="banner">
+					</div>
+					<div class="slide fade">
+						<img src="./assets/banner-3.jpg" alt="banner-3" class="banner">
+					</div>
+					<div class="slide fade">
+						<img src="./assets/banner-4.jpg" alt="banner-4" class="banner">
+					</div>
+				</div>
 				<p class="banner-title">"Holiday is fun with my Travel Agent."</p>
 				<div class="profile">
-					<img src="https://placehold.co/50x50" alt="profile" class="profile-img">
+					<img src="./assets/profile.jpg" alt="profile" class="profile-img">
 					<div class="profile-detail">
 						<h3>Mr. Smith</h3>
 						<p>CEO of Shadow Garden</p>
@@ -58,9 +71,9 @@
 						<h3>Contact Us</h3>
 						<p>Our sales will contact you as soon as we receive your data</p>
 					</div>
-					<form action="">
-						<label for="full-name" class="form-label">Your name: <input type="text" name="full-name" placeholder="First and Last Name" class="form-input" /></label>
-						<label for="email-address" class="form-label">Email address: <input type="text" name="email-address" placeholder="example@email.com" class="form-input" /></label>
+					<form name="contact-us" onsubmit="return validateForm()">
+						<label for="full-name" class="form-label" id="full-name">Your name: <input type="text" name="full-name" placeholder="First and Last Name" class="form-input" /></label>	
+						<label for="email-address" class="form-label" id="email-address">Email address: <input type="text" name="email-address" placeholder="example@email.com" class="form-input" /></label>
 						<label for="interest-choice" class="form-label">What are you interested in?
 							<select name="interest-choice" class="form-input select">
 								<option value="0" selected>Select Option</option>
@@ -81,7 +94,7 @@
 			<div class="package-div">
 				<div class="packages">
 					<div class="package-img">
-						<img src="https://placehold.co/50x50" alt="package-1">
+						<img src="https://placehold.co/50x50" alt="package-1" class="package-img">
 					</div>
 					<div class="package-details">
 						<h3>Bali</h3>
@@ -147,5 +160,7 @@
 	<script>
 		feather.replace()
 	</script>
+	<!-- Script Vanilla -->
+	<script src="./script/index.js"></script>
 </body>
 </html>
