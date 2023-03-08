@@ -4,16 +4,19 @@ function validateForm() {
 	const emailInput = document.forms["contact-us"]["email-address"].value;
 	const selectChoice = document.forms["contact-us"]["interest-choice"].value;
 	document.querySelectorAll(".input-error").forEach(elm => elm.remove());
-
+	const selection = checkSelectInput(selectChoice);
 
 	if (nameInput == "" || emailInput == "") {
 		checkNameInput(nameInput);
 		checkEmailInput(emailInput);
+		alert("Please fill the data.");
+		
 		
 		return false;
 	}
 
-
+	console.log("Name: " + nameInput + " Email: " + emailInput + " Selection: " + selection);
+	alert("Your data has been submitted.");
 	return false;
 }
 
@@ -39,6 +42,27 @@ function checkEmailInput(email) {
 	}
 }
 
+function checkSelectInput(select) {
+	let choice;
+	switch(select) {
+		case "0":
+			choice = "Nothing";
+			return choice;
+		case "1":
+			choice = "Destination Choice";
+			return choice;
+		case "2":
+			choice = "Discount & Offer";
+			return choice;
+		case "3":
+			choice = "Quality Service";
+			return choice;
+		default:
+			choice = "Nothing";
+			return choice;
+	}
+}
+
 // Fungsi untuk auto slide show
 let slideIndex = 0;
 showSlides();
@@ -56,5 +80,5 @@ function showSlides() {
 	}
 
 	slides[slideIndex-1].style.display = "flex";
-	setTimeout(showSlides, 3000);
+	setTimeout(showSlides, 5000);
 }
