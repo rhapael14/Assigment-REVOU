@@ -15,6 +15,10 @@ function validateForm() {
 		return false;
 	}
 
+	document.forms["contact-us"]["full-name"].value = "";
+	document.forms["contact-us"]["email-address"].value = "";
+	document.forms["contact-us"]["interest-choice"].value = "0";
+
 	console.log("Name: " + nameInput + " Email: " + emailInput + " Selection: " + selection);
 	alert("Your data has been submitted.");
 	return false;
