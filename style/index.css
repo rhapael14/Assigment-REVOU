@@ -210,7 +210,7 @@ a, h1, h2, p {
 	font-size: 0.95rem;
 }
 
-.form-input {
+.form-input, .select {
 	display: block;
 	width: 100%;
 	min-height: 2.5rem;
@@ -375,6 +375,10 @@ footer > a {
 
 	.call-us > h2 {
 		font-size: 150%;
+	}
+
+	.call-us-btn {
+		width: 30%;
 	}
 
 	.footer-terms {
